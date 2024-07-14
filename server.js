@@ -9,6 +9,11 @@ const app = express();
 
 app.use("/api/tasks", require("./routes/taskRoutes"));
 
+// Add json logic
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 // Define server listening port
 
 app.listen(port, () => console.log("Server listening on ${port}"));
