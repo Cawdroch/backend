@@ -1,4 +1,8 @@
+// Import modules
+
 const mongoose = require("mongoose");
+
+// Define database connection
 
 const connectDB = async () => {
   try {
@@ -9,5 +13,7 @@ const connectDB = async () => {
     process.exit(1);
   }
 };
+
+// Export module
 
 module.exports = connectDB
