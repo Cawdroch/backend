@@ -1,4 +1,4 @@
-// Create variables
+// Import modules
 
 const express = require("express");
 const { errorHandler } = require("./middleware/errorMiddleware");
@@ -17,6 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 // Define routes
 
 app.use("/api/tasks", require("./routes/taskRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
 
 // Define error handler
 
